@@ -1,0 +1,471 @@
+﻿$yellow: #ffd949
+$gray: #f7f7f7
+$blue: #04539c
+$brown: #dca815
+=placeholder($color)
+	&::-webkit-input-placeholder 
+		color: $color
+	&::-moz-placeholder 
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+		
+=pos
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	
+=obj
+	object-fit: cover
+	object-position: center
+
+=unlist
+	margin: 0
+	padding: 0
+	>li
+		position: static
+		&:before
+			display: none
+
+html
+	box-sizing: border-box
+
+*,:before,:after
+	box-sizing: inherit
+	flex: 0 1 auto
+
+body
+	margin: 0
+	padding: 0
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	font: normal normal 14px/1.7 "Montserrat",sans-serif
+	line-height: 24/14*1
+	color: #333
+
+header,footer
+	flex: 0 0 auto
+
+main
+	flex-grow: 1
+
+img,
+iframe,
+video
+	max-width: 100%
+
+a img
+	border: none
+a
+	color: $blue
+	display: inline-block
+em
+	font-style: inherit
+	color: $yellow
+hr
+	display: block
+	width: 100%
+	margin: 20px 0
+	height: auto
+	border: none
+	border-top: 1px solid #ebebeb
+
+p
+	margin: 0 0 .6em
+	&:last-child
+		margin: 0
+
+*:invalid
+	box-shadow: none
+
+/*элементы форм*/
+input,textarea,button,select
+	font: inherit
+	color: inherit	
+textarea
+	resize: none
+	overflow: auto	
+[type=text],
+[type=tel],
+[type=email],
+[type=number],
+[type=url],
+[type=password],
+textarea
+	display: block
+	width: 100%
+	line-height: normal
+	background-color: #fff
+	border: 1px solid #ebebeb
+	padding: 9px 20px
+	margin: 0 0 15px
+	
+select
+	//appearance: none
+	display: block
+	width: 100%
+	margin: 0 0 15px
+	line-height: normal
+	padding: 8px 20px 8px 16px
+	border: 1px solid #ebebeb
+[type=search]
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration
+		display: none		
+[type=number]
+	-moz-appearance: textfield
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		appearance: none
+		margin: 0
+		
+input[type=range]
+	-webkit-appearance: none
+	display: block
+	width: 100%
+	margin: 0
+	padding: 0
+	background: linear-gradient(to right,$brown,$brown) no-repeat left center/100% 2px
+	height: 8px
+	&::-webkit-slider-runnable-track
+		height: 8px
+		background: none
+	&::-webkit-slider-thumb
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background: $brown
+		cursor: pointer
+		-webkit-appearance: none
+	&::-moz-range-track
+		width: 100%
+		height: 8px
+		cursor: pointer
+		animate: 0.2s
+		background: none
+	&::-moz-range-thumb
+		width: 8px
+		height: 8px
+		cursor: pointer
+		border-radius: 50%
+		background-color: $brown
+		border: none
+label
+	display: inline-block
+	user-select: none
+.range-input
+	display: block
+	width: 100%
+	position: relative
+	[type=range]
+		position: absolute
+		left: 0
+		width: 100%
+		bottom: -3px
+		&:focus
+			outline: none
+.term-input
+	display: flex
+	align-items: flex-start
+	input
+		margin-right: 11px
+	select
+		flex: 1 1 auto
+.field
+	display: block
+	&__label
+		display: block
+		margin: 0 0 .6em
+	
+/*кнопки*/
+button,
+[type=submit],
+[type=reset],
+[type=image]
+	cursor: pointer
+.btn
+	display: inline-block
+	vertical-align: top
+	appearance: none
+	font: normal bold 12px/42px "Montserrat",sans-serif
+	color: #333
+	text: 
+		transform: uppercase
+		align: center
+		overflow: ellipsis
+		shadow: none
+		decoration: none
+	white-space: nowrap
+	overflow: hidden
+	max-width: 100%
+	border-radius: 3px
+	border: none
+	background-color: $yellow
+	padding: 0 28px
+	box-shadow: inset 0px -4px 0px 0px #dca815
+	user-select: none
+	&--block
+		display: block
+		width: 100%
+		padding: 0 10px
+	&--blue
+		background-color: $blue
+		color: #fff
+		box-shadow: inset 0px -4px 0px 0px #013a6f
+	&--gray
+		background-color: #ebebeb 
+		box-shadow: inset 0px -4px 0px 0px #e0e0e0
+	&--high
+		line-height: 48px
+	&--big
+		font-size: 14px
+/*заголовки*/
+h1,h2,h3,h4,h5,h6
+	margin: 0 0 1em
+	font-weight: bold
+	text-transform: uppercase
+	line-height: normal
+h1
+	font-size: 24px
+	margin: 0 0 .75em
+h2
+	font-size: 20px
+	margin: 0 0 1.3em
+h3
+	font-size: 16px
+	margin: 1.6em 0 .7em
+	&:first-child
+		margin-top: 0
+	&:last-child
+		margin-bottom: 0
+/*списки*/
+ul,ol
+	margin: 0 0 1.7em
+	padding-left: 2.57em
+ul
+	list-style: none
+	>li
+		position: relative
+		&:before
+			content: '—'
+			display: inline-block
+			position: absolute
+			left: -2.57em
+ol
+	list-style: none
+	counter-reset: ol
+	>li
+		counter-increment: ol
+		position: relative
+		&:before
+			content: counter(ol)'.'
+			display: inline-block
+			position: absolute
+			left: -2.57em
+/*таблицы*/
+table
+	width: 100%
+	table-layout: fixed
+th
+	font-weight: inherit
+	text-align: inherit
+/*контейнеры*/
+.wrapper
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 30px
+.box
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+/*ШАПКА*/
+.logo
+	display: inline-flex
+	align-items: center
+	font-weight: bold
+	font-size: 24px
+	line-height: 1
+	text-transform: uppercase
+	color: $blue
+	text-decoration: none
+	flex: 0 0 auto
+	&__img
+		width: 40px
+		margin: 0 20px 0 0
+		flex: 0 0 auto
+		display: block
+	&__text
+		display: block
+		margin-top: 10px
+.header
+	&__topline
+		padding: 17px 0 30px
+		.wrapper
+			display: flex
+			align-items: center
+	&__logo
+		margin: 0 25px 0 5px
+	&__main
+		margin: 0 25px
+	&__location
+		border: none
+		text-transform: uppercase
+		position: relative
+		padding: 0
+		width: auto
+		display: inline-block
+		font-size: 13px
+		left: -5px
+	&__text
+		font-size: 13px
+		font-weight: bold
+		text-transform: uppercase
+		line-height: normal
+	&__btn
+		margin: 10px 0 0 auto
+	&__menu
+		+unlist
+		background-color: $blue
+		padding: 0 65px
+		border-radius: 3px
+		color: #fff
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		font-size: 18px
+		font-weight: bold
+		line-height: normal
+		text-transform: uppercase
+		user-select: none
+		>li
+			>a
+				display: block
+				color: inherit
+				text-decoration: none
+				padding: 20px 10px	
+/*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.sidebar-block
+	padding: 49px 0 0
+	&__wrapper
+		display: flex
+	&__content
+		flex: 0 1 calc(100% - 285px)
+	&__sidebar
+		flex: 0 0 255px
+		margin-left: 30px
+.filter
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin: 0 0 22px
+	&__item
+		display: inline-block
+		text-decoration: none
+		color: $blue
+		line-height: 1
+		background-color: $gray
+		padding: 4.5px 9px
+		margin: 0 5px 5px 0
+		font-size: 13px
+.rating
+	display: block
+	&__value
+		display: inline-block
+		margin-right: 5px
+	&__star
+		font-size: 16px
+		color: #ccc
+		&--active
+			color: $yellow
+.good-card
+	display: flex
+	background-color: #fcfcfc
+	border-radius: 3px
+	overflow: hidden
+	position: relative
+	&--active
+		background-color: $gray
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 6px
+			left: 6px
+			width: calc(100% - 12px - 260px)
+			height: calc(100% - 12px)
+			border: 1px solid #ebebeb
+			border-radius: 3px 0 0 3px
+			pointer-events: none
+	&__head
+		flex: 0 1 255px
+		padding: 45px 30px
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__title
+		font-size: 20px
+		margin: 0 0 1em
+	&__img
+		margin: auto
+	&__main
+		flex: 1 1 310px
+		padding: 47px 30px
+	&__chars
+		line-height: normal
+		table-layout: auto
+		text-transform: uppercase
+		td,th
+			padding: 0 0 20px
+			&:last-child	
+				font-weight: bold
+				padding-left: 10px
+			&:empty
+				padding-bottom: 17px
+		tr:last-child td
+			padding-bottom: 0
+	
+	&__footer
+		flex: 0 0 260px
+		background-color: $gray
+		border-left: 1px solid #ebebeb
+		padding: 50px 20px 23px 24px
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+	&--active &__footer
+		background-color: $blue
+		border-color: #013a6f
+		color: #fff
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			border: 1px solid #013a6f
+			top: 6px
+			left: 6px
+			width: calc(100% - 12px)
+			height: calc(100% - 12px)
+			border-radius: 0 3px 3px 0
+			pointer-events: none
+	&__btn
+		margin: 0 0 20px
+	&__licence
+		font-size: 12px
+		line-height: 16/12*1
+		text-transform: uppercase
+		margin: auto
+.catalog
+	&__section
+		margin: 0 0 30px
+/*ПОДВАЛ*/
+
+/*АДАПТИВ*/
+@import "adaptive"
