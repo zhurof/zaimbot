@@ -117,7 +117,7 @@
 										</select>
 									</label>
 								</div>
-								<div class="order__column">
+								<div class="order__column order__column--checkbox-group">
 									<label class="label"><input type="checkbox"/><span>С плохой кредитной историей</span></label>
 									<label class="label"><input type="checkbox"/><span>Без справок и поручителей</span></label>
 									<label class="label"><input type="checkbox"/><span>Без отказа</span></label>

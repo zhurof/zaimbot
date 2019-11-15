@@ -52,12 +52,21 @@
 	.news-widget
 		flex: 1 1 calc(50% - 30px)
 		margin: 0 15px 30px
+	.catalog
+		border-bottom: none
+		padding-bottom: 20px
 	.text-block
 		&__sidebar-imitation
 			width: auto
 @media(max-width:991px)
-	h1,h2
+	h1
 		font-size: 18px
+	h2
+		font-size: 16px
+		line-height: 1.5
+	h3
+		font-size: 14px
+		margin: 2em 0 0.8em
 	.wrapper
 		padding-left: 10px
 		padding-right: 10px
@@ -125,6 +134,79 @@
 	.catalog
 		&__head
 			padding: 0 10px
+	.good-card
+		display: block
+		&--active
+			&:before
+				display: none
+		&__head
+			padding: 34px 30px 15px
+			flex-direction: row
+			align-items: center
+			position: relative
+		&--active &__head
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: calc(100% - 12px)
+				height: calc(100% - 6px)
+				left: 6px
+				top: 6px
+				border: 1px solid #ebebeb
+				border-bottom: none
+				border-radius: 3px 3px 0 0
+				pointer-events: none
+		&__title
+			order: 1
+			flex: 1 1 calc(100% - 83px)
+			margin: 0
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		&__img
+			width: 50px
+			flex: 0 0 auto
+			margin: 0 27px 0 6px
+		&__main
+			padding: 12px 28px 30px
+			position: relative
+		&--active &__main
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: calc(100% - 12px)
+				height: calc(100% - 6px)
+				left: 6px
+				top: 0
+				border: 1px solid #ebebeb
+				border-top: none
+				border-radius: 0 0 3px 3px
+				pointer-events: none
+		&__footer
+			padding: 30px 30px 32px
+			display: block
+		&__btn
+			max-width: 215px
+			margin-left: auto
+			margin-right: auto
+		&__licence
+			margin: 27px auto 0
+	.order
+		&__main
+			padding: 27px 20px 30px
+		&__head
+			display: block
+		&__title
+			margin: 0 0 17px
+		&__toggler
+			&:after
+				margin-left: 10px
+	.pagination
+		text-align: center
+	.text-block
+		padding: 10px 10px 30px
 	.social-link
 		display: inline-block
 		margin: 0 22px
@@ -168,9 +250,35 @@
 			
 				
 @media(max-width:767px)
+	.order
+		&__body
+			display: block
+			padding-bottom: 16px
+		&__column
+			width: auto
+			&--checkbox-group
+				padding-top: 18px
+		&__field
+			margin: 0
+		&__footer
+			display: block
+			margin: 0
+			padding-top: 26px
+		&__result
+			margin: 0 0 1em
+			font-size: 12px
+			text-indent: -1px
+			overflow: hidden
+			strong
+				float: right
+		&__btn
+			margin: 13px 0 0
+		&__additional
+			padding: 26px 20px 39px
+			display: block
 	
 
-@media(max-width:479px)
+@media(max-width:479px)	
 	.header
 		&__btn
 			width: calc(100% - 20px)
@@ -180,12 +288,13 @@
 		&__sidebar
 			margin: 0
 			display: block
+			padding: 20px 10px 0
 	.menu,
-	.calc-widget,
 	.banner, 
 	.news-widget
-		margin: 0 0 20px
-		flex-basis: calc(50% - 20px)
+		margin: 0 0 30px
+	.calc-widget
+		display: none
 	.filter
 		display: block
 		&__item
@@ -193,4 +302,12 @@
 			width: max-content
 			max-width: 100%
 			margin-right: 0
+	.good-card
+		&__btn
+			max-width: 100%
+	.order
+		&__btn
+			display: block
+			width: 100%
+			margin-top: 25px		
 	

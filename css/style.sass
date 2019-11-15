@@ -108,13 +108,16 @@ textarea
 	min-width: 0
 	
 select
-	//appearance: none
+	appearance: none
 	display: block
 	width: 100%
 	margin: 0 0 14px
 	line-height: normal
-	padding: 8px 20px 8px 16px
+	padding: 9px 30px 9px 18px
 	border: 1px solid #ebebeb
+	background: url(../img/icons/select-caret.svg) no-repeat right 20px center/8px auto #fff
+	@supports(-moz-appearance: checkbox)
+		text-indent: -2px
 [type=search]
 	&::-webkit-search-decoration,
 	&::-webkit-search-cancel-button,
@@ -184,7 +187,7 @@ label
 	align-items: flex-start
 	line-height: normal
 	font-size: 12px
-	margin: 0 0 25px
+	margin: 0 0 24px
 	/*ебаный дизайнер. Если текст чуть вылезает за пределы блока, то можно не переносить, ага. Так ведь красивше. */
 	letter-spacing: -0.008em
 	&:last-child
@@ -372,13 +375,12 @@ th
 	&__location
 		border: none
 		text-transform: uppercase
-		position: relative
-		padding: 0
+		padding: 0 20px 0 0
 		width: auto
 		margin: 0
 		display: inline-block
 		font-size: 13px
-		left: -5px
+		background-position: right center
 		&--mobile
 			display: none
 	&__text
@@ -594,6 +596,8 @@ th
 		padding-bottom: 8px
 	&__column
 		width: calc((100% - 100px) / 3) /*3 колонки в ряд с отступом 50px между ними*/
+		&--checkbox-group
+			padding-top: 4px
 	&__field
 		margin-bottom: 21px
 	&__footer
@@ -627,6 +631,7 @@ th
 	padding: 8px 0 0
 	margin: 0 0 30px
 	&__title
+		font-size: 16px
 		margin: 0 0 1.6em
 	&__list
 		+unlist
@@ -674,6 +679,7 @@ th
 		height: calc(100% - 12px)
 		pointer-events: none
 	&__title
+		font-size: 16px
 		text-indent: -3px
 		border-bottom: 1px solid #ebebeb
 		padding-bottom: .9em
@@ -694,6 +700,7 @@ th
 		width: 100%
 .news-widget
 	&__title
+		font-size: 16px
 		margin: 0 0 1.6em
 	&__item
 		display: block
