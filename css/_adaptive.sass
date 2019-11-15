@@ -1,12 +1,196 @@
-﻿@media(max-width:1199px)
+﻿@media(min-width: 992px)
+	.header
+		&__menu
+			>li
+				>a
+					transition: all .3s ease
+				&:hover>a
+					color: $yellow
+	.filter
+		&__item
+			transition: all .3s ease
+			&:hover
+				background-color: $blue
+				color: #fff
+	.pagination
+		a
+			transition: all .3s ease
+			&:hover
+				color: $blue
+	.menu
+		&__list
+			>li
+				>a
+					transition: all .3s ease
+				&:hover>a
+					background-color: $gray
+	.footer
+		a
+			transition: all .3s ease
+			&:hover
+				color: #fff
+@media(max-width:1159px)
 	.wrapper
 		max-width: 992px
-  
-//@media(max-width:991px)
+	.header
+		&__bottomline
+			background-color: $blue
+		&__menu
+			padding: 0
+	.sidebar-block
+		&__wrapper
+			display: block
+		&__sidebar
+			padding: 30px 0 0
+			margin: 0 -15px
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+	.menu,
+	.calc-widget,
+	.banner,
+	.news-widget
+		flex: 1 1 calc(50% - 30px)
+		margin: 0 15px 30px
+	.text-block
+		&__sidebar-imitation
+			width: auto
+@media(max-width:991px)
+	h1,h2
+		font-size: 18px
+	.wrapper
+		padding-left: 10px
+		padding-right: 10px
+	.box
+		margin-left: -10px
+		margin-right: -10px	
+	.menu-btn
+		display: inline-block
+	.header
+		position: relative
+		&__topline
+			padding: 9px 0
+			.wrapper
+				flex-wrap: wrap
+				justify-content: space-between
+		&__logo
+			margin: 0 0 0 10px
+		&__text
+			font-size: 12px
+		&__location
+			display: none
+			&--mobile
+				display: block
+				margin: 0 0 32px
+				background: none
+				color: inherit
+		&__btn
+			order: 2
+			margin: 0 auto
+		&__main
+			order: 1
+			width: 100%
+			margin: 17px 0 16px
+			text-align: center
+		&__bottomline
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			width: 100%
+			padding: 32px 20px 35px
+			color: #fff
+			opacity: 0
+			pointer-events: none
+			transition: all .3s ease
+			&.open
+				opacity: 1
+				pointer-events: all
+		&__menu
+			display: block
+			border-top: 1px solid #013a6f
+			padding: 18px 0 0
+			>li>a
+				padding: 9px 0
+	.sidebar-block
+		padding-top: 18px
+		&__sidebar
+			margin: 0 -10px
+	.menu,
+	.calc-widget,
+	.banner, 
+	.news-widget
+		margin: 0 10px 20px
+		flex-basis: calc(50% - 20px)
+	.catalog
+		&__head
+			padding: 0 10px
+	.social-link
+		display: inline-block
+		margin: 0 22px
+		&__text
+			display: none
+		&__icon
+			font-size: 45px
+			margin: 0
+			display: block
+	.footer
+		&__topline
+			padding: 20px 0
+		&__box
+			display: block
+			margin: 0
+		&__column
+			width: auto
+			margin: 0
+			display: none
+			&--social
+				display: block
+		&__title
+			display: none
+		&__social
+			padding: 0
+			display: flex
+			align-items: center
+			justify-content: center
+		&__bottomline
+			text-align: center
+			padding: 27px 0 20px
+			.wrapper
+				display: block
+		&__text
+			margin: 0 0 1.4em
+		&__payment
+			&-system
+				width: 39px
+				height: 25px
+				margin: 0 3px
+			
+				
+@media(max-width:767px)
 	
 
-//@media(max-width:767px)
-	
-
-//@media(max-width:480px)
+@media(max-width:479px)
+	.header
+		&__btn
+			width: calc(100% - 20px)
+			padding: 0 10px
+	.sidebar-block
+		padding-top: 18px
+		&__sidebar
+			margin: 0
+			display: block
+	.menu,
+	.calc-widget,
+	.banner, 
+	.news-widget
+		margin: 0 0 20px
+		flex-basis: calc(50% - 20px)
+	.filter
+		display: block
+		&__item
+			display: block
+			width: max-content
+			max-width: 100%
+			margin-right: 0
 	

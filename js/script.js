@@ -14,3 +14,8 @@ $('[type=range]').on('input change',setRangeProgress);
 $('.range-input [type=range]').on('input change',function(){
 	$(this).siblings('input').val(this.value);
 })
+//меню
+$('.menu-btn').click(function(){
+	$(this).toggleClass('active');
+	$('.header__bottomline').toggleClass('open');
+})

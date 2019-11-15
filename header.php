@@ -27,10 +27,15 @@
 					<div class="header__text">Портал поиска выгодных предложений по кредитам и займам</div>
 				</div>
 				<a href="" class="btn header__btn">Единая заявка во все МФО</a>
+				<span class="menu-btn"></span>
 			</div>
 		</div>
 		<div class="header__bottomline">
 			<div class="wrapper">
+				<select class="header__location header__location--mobile">
+					<option>Санкт-Петербург</option>
+					<option>Москва</option>
+				</select>
 				<ul class="header__menu">
 					<li><a href="#">Банки</a></li>
 					<li><a href="#">Карты</a></li>
