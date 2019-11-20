@@ -49,3 +49,10 @@ function initMap(){
 		objectManager.add(data);
 	});
 }
+//поле для ввода рейтинга
+$('.rating-field__star').click(function(){
+	var index = $(this).parent('.rating-field').children('.rating-field__star').index(this) + 1;
+	$(this).addClass('rating-field__star--active').prevAll('.rating-field__star').addClass('rating-field__star--active');
+	$(this).nextAll('.rating-field__star').removeClass('rating-field__star--active');
+	$(this).siblings('.rating-field__value').val(index);
+})

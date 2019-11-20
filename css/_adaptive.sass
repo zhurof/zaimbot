@@ -213,25 +213,41 @@
 	.text-block
 		padding: 10px 10px 30px
 	.good
+		margin: 0 10px
 		&__body
-			padding: 47px 20px 30px
+			padding: 47px 20px 29px
 		&__main
 			display: block
 		&__head
-			margin: 0 0 40px
+			margin: 0 0 36px
 			display: block
+		&__title
+			margin: 0 0 3.3em
+		&__logo
+			width: 170px
+		&__content
+			padding: 0
 		&__text
-			padding: 35px 20px 25px
+			padding: 35px 20px 20px
 	.review
-		padding: 30px 20px
+		padding: 24px 22px 28px
+		&__info
+			margin-top: 22px
+			padding-top: 22px
+	.reviews
+		margin: 0 10px
+		padding: 35px 0 15px
 	.form-block
 		padding: 15px 0
+		margin: 0 10px
 		&:last-child
 			padding-bottom: 15px
+		&__title
+			font-size: 16px
 		&__inner
-			padding: 17px 20px 30px
+			padding: 13px 20px 30px
 		&__field
-			margin: 0 10px 9px
+			margin: 0 10px
 	.social-link
 		display: inline-block
 		margin: 0 22px
@@ -240,8 +256,7 @@
 		&__icon
 			font-size: 45px
 			margin: 0
-			display: block
-		
+			display: block		
 	.footer
 		&__topline
 			padding: 20px 0
@@ -313,10 +328,41 @@
 			tbody,tr,td,th
 				display: block
 			td,th
+				padding: 0
 				&:empty
 					display: none
 				&:last-child
 					padding-left: 0
+			tbody
+				tr
+					margin: 0 0 1.83em
+					&:first-child
+						display: flex
+						flex-wrap: wrap
+						align-items: baseline
+						justify-content: space-between
+		&__footer
+			margin: 48px 0 0
+			display: block
+			text-align: center
+		&__btn
+			margin-right: 0
+	.review
+		&__info
+			display: block
+		&__name
+			margin: 0 0 .66em
+			padding: 0
+		&__date
+			margin: 0 0 16px
+			padding: 0
+	.form-block
+		&__box
+			display: block
+			margin: 0
+		&__field
+			margin: 0
+			width: 100%
 	
 
 @media(max-width:479px)	
@@ -350,5 +396,12 @@
 		&__btn
 			display: block
 			width: 100%
-			margin-top: 25px		
-	
+			margin-top: 25px
+	.good
+		&__btn
+			display: block
+			width: 100%
+	.form-block
+		&__btn
+			display: block
+			width: 100%

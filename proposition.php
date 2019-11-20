@@ -25,7 +25,7 @@
 											<tr>
 												<td>Рейтинг:</td>
 												<td>
-													<span class="rating">
+													<span class="rating good__rating">
 														<span class="rating__value">7,8</span>
 														<i class="icon-star rating__star rating__star--active"></i>
 														<i class="icon-star rating__star rating__star--active"></i>
@@ -137,6 +137,7 @@
 										<i class="icon-star rating-field__star rating-field__star--active"></i>
 										<i class="icon-star rating-field__star rating-field__star--active"></i>
 										<i class="icon-star rating-field__star"></i>
+										<input type="hidden" class="rating-field__value" value="9">
 									</div>
 								</div>
 								<label class="field form-block__field">
