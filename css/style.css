@@ -278,6 +278,19 @@ label {
   margin: 0 0 0.5em;
 }
 
+.rating-field {
+  display: block;
+  font-size: 16px;
+  line-height: 2.375;
+  color: #cccccc;
+}
+.rating-field__start {
+  display: inline-block;
+}
+.rating-field__start--active {
+  color: #ffd949;
+}
+
 /*кнопки */
 button,
 [type=submit],
@@ -363,6 +376,11 @@ h3:first-child {
 }
 h3:last-child {
   margin-bottom: 0;
+}
+
+h4 {
+  font-size: inherit;
+  margin: 0 0 1.3em;
 }
 
 /*списки */
@@ -571,6 +589,9 @@ th {
 .sidebar-block {
   padding: 49px 0 0;
 }
+.sidebar-block:nth-child(n+2) {
+  padding-top: 20px;
+}
 .sidebar-block__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -620,6 +641,10 @@ th {
 .rating__value {
   display: inline-block;
   margin-right: 5px;
+  font-weight: bold;
+}
+.rating__value--big-space {
+  margin-right: 16px;
 }
 .rating__star {
   font-size: 16px;
@@ -1008,6 +1033,9 @@ th {
   width: 100%;
 }
 
+.news-widget {
+  margin: 0 0 30px;
+}
 .news-widget__title {
   font-size: 16px;
   margin: 0 0 1.6em;
@@ -1034,6 +1062,195 @@ th {
   display: inline-block;
   vertical-align: top;
   margin: 1.5em 0 0;
+}
+
+.breadcrumbs {
+  padding: 12px 0;
+}
+.breadcrumbs__list {
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs__list > li {
+  position: static;
+}
+.breadcrumbs__list > li:before {
+  display: none;
+}
+.breadcrumbs__list > li {
+  display: inline-block;
+}
+.breadcrumbs__list > li:not(:last-child):after {
+  content: " /";
+}
+
+.map-block {
+  margin: 0 0 21px;
+}
+.map-block__map {
+  height: 386px;
+  background-color: gray;
+}
+
+.good__body {
+  background-color: #fcfcfc;
+  padding: 48px 40px 51px;
+}
+.good__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.good__head {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 183px;
+          flex: 0 0 183px;
+  margin: 0 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.good__title {
+  font-size: 20px;
+}
+.good__logo {
+  margin: auto;
+}
+.good__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(100% - 210px);
+          flex: 1 1 calc(100% - 210px);
+  padding: 0 30px;
+}
+.good__chars {
+  line-height: normal;
+  table-layout: auto;
+  text-transform: uppercase;
+}
+.good__chars td, .good__chars th {
+  padding: 0 0 20px;
+}
+.good__chars td:last-child, .good__chars th:last-child {
+  font-weight: bold;
+  padding-left: 10px;
+}
+.good__chars td:empty, .good__chars th:empty {
+  padding-bottom: 17px;
+}
+.good__chars tr:last-child td {
+  padding-bottom: 0;
+}
+.good__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 31px 0 0;
+}
+.good__btn {
+  width: 215px;
+  margin: 10px 30px 0 0;
+}
+.good__text {
+  background-color: #f7f7f7;
+  border-top: 1px solid #ebebeb;
+  padding: 36px 40px 40px;
+}
+.good__text ul {
+  padding-left: 0;
+}
+.good__text ul:last-child {
+  margin-bottom: 0;
+}
+.good__text ul > li:before {
+  position: static;
+  margin-right: 0.4em;
+}
+
+.reviews {
+  padding: 48px 0 30px;
+}
+.reviews__title {
+  font-size: 18px;
+}
+.reviews__footer {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0 0;
+}
+
+.review {
+  padding: 26px 42px 22px;
+  background-color: #f7f7f7;
+}
+.review__info {
+  border-top: 1px solid #ebebeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 19px;
+  margin-top: 15px;
+}
+.review__name {
+  text-transform: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 150px;
+          flex: 0 1 150px;
+  padding-right: 10px;
+  margin: 0;
+}
+.review__date {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 190px;
+          flex: 0 1 190px;
+  padding-right: 10px;
+}
+
+.form-block {
+  padding: 20px 0 40px;
+}
+.form-block:last-child {
+  padding-bottom: 80px;
+}
+.form-block__title {
+  font-size: 18px;
+  margin: 0 0 0.8em;
+}
+.form-block__inner {
+  background-color: #f7f7f7;
+  padding: 34px 40px 50px;
+  overflow: hidden;
+}
+.form-block__box {
+  margin: 0 -25px;
+}
+.form-block__field {
+  margin: 0 25px 9px;
+  width: 215px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.form-block__captcha {
+  display: block;
+  margin: 10px 0 30px;
 }
 
 .social-link {
@@ -1176,6 +1393,10 @@ th {
 
 /*АДАПТИВ */
 @media(min-width: 992px) {
+  a:hover {
+    text-decoration: none;
+  }
+
   .header__menu > li > a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -1207,6 +1428,10 @@ th {
   }
   .menu__list > li:hover > a {
     background-color: #f7f7f7;
+  }
+
+  .social-link:hover .social-link__text {
+    text-decoration: none;
   }
 
   .footer a {
@@ -1481,6 +1706,37 @@ th {
     padding: 10px 10px 30px;
   }
 
+  .good__body {
+    padding: 47px 20px 30px;
+  }
+  .good__main {
+    display: block;
+  }
+  .good__head {
+    margin: 0 0 40px;
+    display: block;
+  }
+  .good__text {
+    padding: 35px 20px 25px;
+  }
+
+  .review {
+    padding: 30px 20px;
+  }
+
+  .form-block {
+    padding: 15px 0;
+  }
+  .form-block:last-child {
+    padding-bottom: 15px;
+  }
+  .form-block__inner {
+    padding: 17px 20px 30px;
+  }
+  .form-block__field {
+    margin: 0 10px 9px;
+  }
+
   .social-link {
     display: inline-block;
     margin: 0 22px;
@@ -1574,6 +1830,30 @@ th {
   .order__additional {
     padding: 26px 20px 39px;
     display: block;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .map-block {
+    margin: 20px 0 17px;
+  }
+  .map-block__wrapper {
+    padding: 0;
+  }
+
+  .good__chars {
+    display: block;
+  }
+  .good__chars tbody, .good__chars tr, .good__chars td, .good__chars th {
+    display: block;
+  }
+  .good__chars td:empty, .good__chars th:empty {
+    display: none;
+  }
+  .good__chars td:last-child, .good__chars th:last-child {
+    padding-left: 0;
   }
 }
 @media(max-width:479px) {

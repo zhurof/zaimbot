@@ -1,0 +1,39 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"id": 0,
+			"geometry": {
+				"type": "Point", 
+				"coordinates": [55.766326, 37.629430]
+			},
+			"properties": {
+				"hintContent": "Viva Деньги",
+				"balloonContentHeader": "Viva Деньги"
+			}
+		},{
+			"type": "Feature",
+			"id": 1,
+			"geometry": {
+				"type": "Point", 
+				"coordinates": [55.756163, 37.584455]
+			},
+			"properties": {
+				"hintContent": "МигКредит",
+				"balloonContentHeader": "МигКредит"
+			}
+		},{
+			"type": "Feature",
+			"id": 2,
+			"geometry": {
+				"type": "Point", 
+				"coordinates": [55.750257, 37.642820]
+			},
+			"properties": {
+				"hintContent": "Быстроденьги",
+				"balloonContentHeader": "МигКредит"
+			}
+		}
+	]
+}

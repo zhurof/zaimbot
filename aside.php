@@ -1,4 +1,7 @@
 <aside class="sidebar-block__sidebar">
+	<?
+		if(basename($_SERVER['REQUEST_URI']) != 'proposition.php'):
+	?>
 	<div class="menu">
 		<h3 class="menu__title">Способы получения</h3>
 		<ul class="menu__list">
@@ -12,6 +15,7 @@
 			<li><a href="#">На WebMoney кошелек</a></li>
 		</ul>
 	</div>
+	<?endif;?>
 	<div class="calc-widget">
 		<h3 class="calc-widget__title">Расчет переплаты</h3>
 		<form action="" class="calc-widget__form">

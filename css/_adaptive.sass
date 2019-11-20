@@ -1,4 +1,6 @@
 ﻿@media(min-width: 992px)
+	a:hover
+		text-decoration: none
 	.header
 		&__menu
 			>li
@@ -24,6 +26,9 @@
 					transition: all .3s ease
 				&:hover>a
 					background-color: $gray
+	.social-link
+		&:hover &__text
+			text-decoration: none
 	.footer
 		a
 			transition: all .3s ease
@@ -207,6 +212,26 @@
 		text-align: center
 	.text-block
 		padding: 10px 10px 30px
+	.good
+		&__body
+			padding: 47px 20px 30px
+		&__main
+			display: block
+		&__head
+			margin: 0 0 40px
+			display: block
+		&__text
+			padding: 35px 20px 25px
+	.review
+		padding: 30px 20px
+	.form-block
+		padding: 15px 0
+		&:last-child
+			padding-bottom: 15px
+		&__inner
+			padding: 17px 20px 30px
+		&__field
+			margin: 0 10px 9px
 	.social-link
 		display: inline-block
 		margin: 0 22px
@@ -216,6 +241,7 @@
 			font-size: 45px
 			margin: 0
 			display: block
+		
 	.footer
 		&__topline
 			padding: 20px 0
@@ -246,8 +272,7 @@
 			&-system
 				width: 39px
 				height: 25px
-				margin: 0 3px
-			
+				margin: 0 3px			
 				
 @media(max-width:767px)
 	.order
@@ -276,6 +301,22 @@
 		&__additional
 			padding: 26px 20px 39px
 			display: block
+	.breadcrumbs
+		display: none
+	.map-block
+		margin: 20px 0 17px
+		&__wrapper
+			padding: 0
+	.good
+		&__chars
+			display: block
+			tbody,tr,td,th
+				display: block
+			td,th
+				&:empty
+					display: none
+				&:last-child
+					padding-left: 0
 	
 
 @media(max-width:479px)	
