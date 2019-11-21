@@ -673,13 +673,24 @@ th {
 .good-card--active {
   background-color: #f7f7f7;
 }
-.good-card--active:before {
+.good-card__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 565px;
+          flex: 1 1 565px;
+}
+.good-card--active .good-card__body:before {
   content: "";
   display: block;
   position: absolute;
   top: 6px;
   left: 6px;
-  width: calc(100% - 12px - 260px);
+  width: calc(100% - 12px);
   height: calc(100% - 12px);
   border: 1px solid #ebebeb;
   border-radius: 3px 0 0 3px;
@@ -731,6 +742,9 @@ th {
 }
 .good-card__chars tr:last-child td {
   padding-bottom: 0;
+}
+.good-card__description {
+  padding: 20px 30px;
 }
 .good-card__footer {
   -webkit-box-flex: 0;
@@ -1616,8 +1630,8 @@ th {
   .good-card {
     display: block;
   }
-  .good-card--active:before {
-    display: none;
+  .good-card__body {
+    display: block;
   }
   .good-card__head {
     padding: 34px 30px 15px;
@@ -1629,19 +1643,6 @@ th {
         -ms-flex-align: center;
             align-items: center;
     position: relative;
-  }
-  .good-card--active .good-card__head:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: calc(100% - 12px);
-    height: calc(100% - 6px);
-    left: 6px;
-    top: 6px;
-    border: 1px solid #ebebeb;
-    border-bottom: none;
-    border-radius: 3px 3px 0 0;
-    pointer-events: none;
   }
   .good-card__title {
     -webkit-box-ordinal-group: 2;
@@ -1666,18 +1667,8 @@ th {
     padding: 12px 28px 30px;
     position: relative;
   }
-  .good-card--active .good-card__main:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: calc(100% - 12px);
-    height: calc(100% - 6px);
-    left: 6px;
-    top: 0;
-    border: 1px solid #ebebeb;
-    border-top: none;
-    border-radius: 0 0 3px 3px;
-    pointer-events: none;
+  .good-card__description {
+    padding: 0 30px 30px;
   }
   .good-card__footer {
     padding: 30px 30px 32px;

@@ -129,7 +129,7 @@
 								$cards = [
 									['title'=>'МигКредит','img'=>'mig.svg','active'=>true],
 									['title'=>'Быстроденьги','img'=>'quickmoney.svg','active'=>true],
-									['title'=>'viva деньги','img'=>'viva.png']
+									['title'=>'viva деньги','img'=>'viva.png','text'=>true]
 								];
 								foreach($cards as $index=>$card){
 									include 'card.php';

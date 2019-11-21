@@ -477,18 +477,23 @@ th
 	overflow: hidden
 	position: relative
 	&--active
-		background-color: $gray
-		&:before
-			content: ''
-			display: block
-			position: absolute
-			top: 6px
-			left: 6px
-			width: calc(100% - 12px - 260px)
-			height: calc(100% - 12px)
-			border: 1px solid #ebebeb
-			border-radius: 3px 0 0 3px
-			pointer-events: none
+		background-color: $gray			
+	&__body
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		flex: 1 1 565px
+	&--active &__body:before
+		content: ''
+		display: block
+		position: absolute
+		top: 6px
+		left: 6px
+		width: calc(100% - 12px)
+		height: calc(100% - 12px)
+		border: 1px solid #ebebeb
+		border-radius: 3px 0 0 3px
+		pointer-events: none
 	&__head
 		flex: 0 1 255px
 		padding: 45px 30px
@@ -516,7 +521,8 @@ th
 				padding-bottom: 17px
 		tr:last-child td
 			padding-bottom: 0
-	
+	&__description
+		padding: 20px 30px
 	&__footer
 		flex: 0 0 260px
 		background-color: $gray

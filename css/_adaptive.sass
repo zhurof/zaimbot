@@ -141,27 +141,13 @@
 			padding: 0 10px
 	.good-card
 		display: block
-		&--active
-			&:before
-				display: none
+		&__body
+			display: block			
 		&__head
 			padding: 34px 30px 15px
 			flex-direction: row
 			align-items: center
 			position: relative
-		&--active &__head
-			&:before
-				content: ''
-				display: block
-				position: absolute
-				width: calc(100% - 12px)
-				height: calc(100% - 6px)
-				left: 6px
-				top: 6px
-				border: 1px solid #ebebeb
-				border-bottom: none
-				border-radius: 3px 3px 0 0
-				pointer-events: none
 		&__title
 			order: 1
 			flex: 1 1 calc(100% - 83px)
@@ -176,19 +162,8 @@
 		&__main
 			padding: 12px 28px 30px
 			position: relative
-		&--active &__main
-			&:before
-				content: ''
-				display: block
-				position: absolute
-				width: calc(100% - 12px)
-				height: calc(100% - 6px)
-				left: 6px
-				top: 0
-				border: 1px solid #ebebeb
-				border-top: none
-				border-radius: 0 0 3px 3px
-				pointer-events: none
+		&__description
+			padding: 0 30px 30px
 		&__footer
 			padding: 30px 30px 32px
 			display: block
